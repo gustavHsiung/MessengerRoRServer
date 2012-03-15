@@ -5,8 +5,7 @@ Demo::Application.routes.draw do
     get "welcome" => "welcome#index"
     get "welcome/say_hello" => "welcome#say"
     
-    post "upload" => "twitter#upload"
-
+    resources :photos
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
