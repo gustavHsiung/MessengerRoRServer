@@ -28,9 +28,10 @@ gem 'jquery-rails'
 
 gem 'paperclip'
 
-gem 'aws-s3', :require => 'aws/s3'
+gem 'rmagick'
 
 gem 'aws-sdk'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

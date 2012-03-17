@@ -6,6 +6,7 @@ Demo::Application.routes.draw do
     get "welcome/say_hello" => "welcome#say"
     
     resources :photos
+    resources :tweet
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,13 +1,16 @@
 class Image < ActiveRecord::Base
+  attr_accessible :title, :message, :photo
   has_attached_file :photo,
     :styles =>{
       :thumb  => "100x100",
-      :medium => "200x200",
       :large => "600x400"
     },
     :storage => :s3,
-    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :bucket => 'TiToTwBucket',
+    :s3_credentials => {:access_key_id=> ENV['AKIAIOSUVUJUTAN5M7JQ'],
+                        :secret_access_key =>ENV['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']}, 
     :url => ':s3_escaped_path_url',
-    :path => "pictures/person/:id/:style_:filename",
-    :bucket => 'TiToTwBucket'
+    :path => "photo/:style_:filename"
+    
+
 end
